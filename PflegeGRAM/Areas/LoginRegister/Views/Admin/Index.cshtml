@@ -1,9 +1,11 @@
 ﻿@page
+@using Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Internal;
+@using PflegeGRAM.Areas.LoginRegister.Controllers;
 @model LoginModel
 
 @{
-    ViewData["Title"] = "Log in";
-    Layout = "~/Areas/Identity/Pages/_Layout.cshtml";
+    //ViewData["Title"] = "PflegeGRAM";
+    Layout = "~/Areas/LoginRegister/Shared/_Layout.cshtml";
 }
 
 <!-- Header -->
@@ -12,7 +14,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1>Log In</h1>
-                <p>You don't have a password? Then please <a class="white" href="sign-up.html">Sign Up</a></p>
+                <p>You don't have a password? Then please <a class="white" asp-area="LoginRegister" asp-controller="Admin" asp-action="Register">Sign Up</a></p>
                 <!-- Sign Up Form -->
                 <div class="form-container">
                     <form id="logInForm" data-toggle="validator" data-focus="false">
@@ -41,7 +43,6 @@
     </div> <!-- end of container -->
 </header> <!-- end of ex-header -->
 <!-- end of header -->
-
 @*<div class="row justify-content-center">
     <div class="col-md-10">
         <section>
