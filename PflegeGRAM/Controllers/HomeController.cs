@@ -23,6 +23,14 @@ namespace PflegeGRAM.Controllers
             return View();
         }
 
+
+        //Mujo dodao
+        [Route("Identity/Pages/Account/Login")] 
+        public IActionResult Login() 
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
