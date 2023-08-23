@@ -1,10 +1,10 @@
 ﻿@page
 @using Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Internal;
-@using PflegeGRAM.Areas.LoginRegister.Controllers;
+@using PflegeGRAM.Areas.Register.Controllers;
 @model RegisterModel
 @{
     //ViewData["Title"] = "Register";
-    Layout = "~/Areas/LoginRegister/Shared/_Layout.cshtml";
+    Layout = "~/Areas/Register/Shared/_Layout.cshtml";
 }
 
 <!-- Header -->
@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1>Sign Up</h1>
-                <p>Fill out the form below to sign up for Tivo. Already signed up? Then just <a class="white" asp-area="LoginRegister" asp-controller="Admin" asp-action="Index">Log In</a></p>
+                <p>Fill out the form below to sign up for Tivo. Already signed up? Then just <a class="white" asp-area="Login" asp-controller="Admin" asp-action="Index">Log In</a></p>
                 <!-- Sign Up Form -->
                 <div class="form-container">
                     <form id="signUpForm" data-toggle="validator" data-focus="false">

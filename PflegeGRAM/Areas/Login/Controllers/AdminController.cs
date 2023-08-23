@@ -1,17 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace PflegeGRAM.Areas.LoginRegister.Controllers
+namespace PflegeGRAM.Areas.Login.Controllers
 {
-    [Area("LoginRegister")]
+    [Area("Login")]
     public class AdminController : Controller
     {
         public IActionResult Index()
         { 
-            return View();
-        }
-
-        public IActionResult Register()
-        {
             return View();
         }
 

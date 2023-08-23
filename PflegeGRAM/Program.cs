@@ -21,8 +21,11 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
-    name: "LoginRegister",
+    name: "Login",
     pattern: "{area:exists}/{controller=Admin}/{action=Index}/{id?}");
+app.MapControllerRoute(
+    name: "Register",
+    pattern: "{area:exists}/{controller=Admin}/{action=Register}/{id?}");
 
 app.MapControllerRoute(
     name: "default",
