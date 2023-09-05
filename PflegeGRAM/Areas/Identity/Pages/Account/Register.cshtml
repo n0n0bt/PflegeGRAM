@@ -11,32 +11,41 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1>Sign Up</h1>
-                <p>Fill out the form below to sign up for Tivo. Already signed up? Then just <a class="white" asp-area="Login" asp-controller="Admin" asp-action="Index">Log In</a></p>
+                <p>Fill out the form below to sign up for Tivo. Already signed up? Then just <a class="white" asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl">Log In</a></p>
                 <!-- Sign Up Form -->
                 <div class="form-container">
-                    <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">>
+                    <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
                         <div class="form-group">
                             <input input asp-for="Input.Email" autocomplete="username" aria-required="true" type="email" class="form-control-input" id="semail" />
                             <label asp-for="Input.Email" class="label-control" for="semail">Email</label>
                             <span asp-validation-for="Input.Email" class="help-block with-errors"></span>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control-input" id="sname" required>
-                            <label class="label-control" for="sname">Name</label>
-                            <div class="help-block with-errors"></div>
+                            <input asp-for="Input.FirstName" type="text" class="form-control-input" aria-required="true" />
+                            <label class="label-control" asp-for="Input.FirstName">First Name</label>
+                            <span asp-validation-for="Input.FirstName" class="help-block with-errors"></span>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control-input" id="spassword" required>
-                            <label class="label-control" for="spassword">Password</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group checkbox">
-                            <input type="checkbox" id="sterms" value="Agreed-to-Terms" required>I agree with Tivo's <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a>
-                            <div class="help-block with-errors"></div>
+                            <input asp-for="Input.SecondName" type="text" class="form-control-input" aria-required="true" />
+                            <label class="label-control" asp-for="Input.SecondName">Second Name</label>
+                            <span asp-validation-for="Input.SecondName" class="help-block with-errors"></span>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">SIGN UP</button>
+                            <input asp-for="Input.Password" type="password" class="form-control-input" id="spassword" autocomplete="new-password" aria-required="true" /> 
+                            <label class="label-control" asp-for="Input.Password">Password</label>
+                            <span asp-validation-for="Input.Password" class="help-block with-errors"></span>
                         </div>
+
+                        <div class="form-group">
+                            <input asp-for="Input.ConfirmPassword" type="password" class="form-control-input" id="spassword" autocomplete="new-password" aria-required="true" />
+                            <label class="label-control" asp-for="Input.ConfirmPassword">Confirrm Password</label>
+                            <span asp-validation-for="Input.ConfirmPassword" class="help-block with-errors"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <button id="registerSubmit" type="submit" class="form-control-submit-button">Register</button>
+                        </div>
+
                         <div class="form-message">
                             <div id="smsgSubmit" class="h3 text-center hidden"></div>
                         </div>
