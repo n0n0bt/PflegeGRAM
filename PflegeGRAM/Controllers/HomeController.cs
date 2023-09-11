@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using PflegeGRAM.Models;
@@ -6,6 +7,7 @@ using System.Diagnostics;
 
 namespace PflegeGRAM.Controllers
 {
+    
     public class HomeController : Controller
     {
 
